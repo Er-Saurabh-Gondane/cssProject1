@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding: 30px;
+    background: linear-gradient(to right,#0e110e,#0c390c);
+   
+
+    
+}
+.left-text{
+    flex-basis: 30%;
+    /* The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing. */
+    
+}
+
+.heading{
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+}
+.sub-heading{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #ddd;
+    text-align:center;
+}
+.gallary{
+    display: grid;
+    /* by the help of flex basis it will occupy the size of gallary*/
+    flex-basis:50%;
+    /* we have to make it as like galary so we are a grid as display */
+  
+    gap: 8px;
+     /*we are using grid template row and colums as per the requirment  */
+    grid-template-columns: repeat(3 , 1fr);
+    /* jitni bhi rows banne wali he usnko height dedo */
+    grid-auto-rows: 120px;
+}
+/* psuedo selector*/   
+.box:hover{
+    background-color: #808080;
+    background-position: center;
+    box-shadow: 0 0 4px #ffffff;
+    cursor: pointer;
+}
+.box{
+    background-size: cover;
+    /* agar koi image puri nahi a rhi he to wo cover ho jayegi mtlb complete ajayegi grid me */
+    background-position:bottom;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    /* abhi smja justify content kya krta he wo content ke nam ko justify krta h */
+    align-items: center;
+    background-color: #222;
+    /* this will blend two items */
+    background-blend-mode: hard-light;
+    transition: all 2s ease-in-out ;
+  
+}
+/* .box1{    
+   grid-row: span 2;
+} */
+/* instead of doing this we have a utility class that we can create...dont think too much just do it */
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+.auto{
+    grid-column: span 3;
+}
